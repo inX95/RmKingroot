@@ -1,9 +1,8 @@
 ## 卸载流氓软件kingroot
-骑了一匹马。到了目的地，它却要骑在主人头上，想要在主人头上拉屎拉尿，留下一堆脏东西，宣称除非把它驮回出发地，否则就不下来。
-终究是一匹马，被人骑的次数多了，居然妄想自己当主人。
+以子之矛，攻子之盾。卸载脚本文件位于app/src/main/assets/clean.sh。妥妥的有用！
 
 ## 卸载apk下载地址
-https://raw.githubusercontent.com/XieZongxin/RmKingroot/release/RmKingroot.apk
+github: https://raw.githubusercontent.com/XieZongxin/RmKingroot/release/RmKingroot.apk
 
 百度云：链接: https://pan.baidu.com/s/1dEPM17z 密码: vgmw
 
@@ -13,3 +12,5 @@ https://raw.githubusercontent.com/XieZongxin/RmKingroot/release/RmKingroot.apk
 
 ## 脚本来自
 http://www.w0lfdroid.com/2015/05/How-to-Remove-Replace-KingUser-KingRoot-with-SuperSU.html
+## 协议
+MIT
