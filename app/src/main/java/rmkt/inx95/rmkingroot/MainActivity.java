@@ -1,6 +1,7 @@
 package rmkt.inx95.rmkingroot;
 
 import android.content.Context;
+import android.os.AsyncTask;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Environment;
@@ -14,30 +15,58 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.util.ArrayList;
 
+
 public class MainActivity extends AppCompatActivity {
 
+	private class ShellTask extends AsyncTask < ArrayList<String>, Void, Boolean >
+	{
+
+		@SafeVarargs
+		@Override
+		protected final Boolean doInBackground ( ArrayList < String >... lines )
+		{
+			return ShellUtil.execute ( lines [ 0 ] );
+		}
+
+		@Override
+		protected void onPostExecute ( Boolean ShellTaskResult )
+		{
+			if ( ShellTaskResult )
+			{
+				show.setText ( "成功，请退出后安装 SuperSu 等软件。" );
+			}
+			else
+			{
+				show.setText ( "失败，真是可怕！" );
+			}
+		}
+	}
 
     private static final String mTargetDir = Environment.getExternalStorageDirectory().getPath()+File.separator+"mrw";
     private static final String mSu = "su";
     private static final String mBusybox = "busybox";
+
+	private TextView show;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        final TextView show = (TextView) findViewById(R.id.tv_show);
+		show = (TextView) findViewById(R.id.tv_show);
         ImageButton start = (ImageButton) findViewById(R.id.ib_start);
+
+		final ShellTask task = new ShellTask ();
 
         copyFileToSD(this);
         start.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 try {
+					show.setText("正在进行清理 KingRoot 作业，请不要进行任何操作⋯⋯");
                     InputStream is = getApplicationContext().getAssets().open("clean.sh");
-                    ArrayList<String> lines = FileUtil.parseInputStream(is);
-                    ShellUtil.execute(lines);
-                    show.setText("成功,请退出后安装SuperSu等软件.");
+					//noinspection unchecked
+					task.execute ( FileUtil.parseInputStream(is) );
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
