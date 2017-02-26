@@ -18,8 +18,7 @@ import java.util.ArrayList;
  * Created by inx95 on 16-10-20.
  */
 
-public final class FileUtil {
-
+public final class FileUtils {
 
     public static ArrayList<String> parseFile(String filePath) {
         return parseFile(new File(filePath));

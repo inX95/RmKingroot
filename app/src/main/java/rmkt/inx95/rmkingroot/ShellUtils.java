@@ -12,9 +12,9 @@ import java.util.ArrayList;
  * Created by inx95 on 16-10-20.
  */
 
-public class ShellUtil {
+public class ShellUtils {
     public static boolean execute(ArrayList<String> commands) {
-        boolean retval = false;
+        boolean result = false;
 
         try {
             if (null != commands && commands.size() > 0) {
@@ -42,22 +42,25 @@ public class ShellUtil {
                 try {
                     int suProcessRetval = process.waitFor();
                     if (255 != suProcessRetval) {
-                        retval = true;
+                        result = true;
                     } else {
-                        retval = false;
+                        result = false;
                     }
-                    System.out.println("from android shell: "+output.toString()) ;
+                    System.out.println("from android shell: " + output.toString());
                 } catch (Exception ex) {
                 }
             }
         } catch (IOException ex) {
             Log.w("ROOT", "Can't get root access", ex);
+            result = false;
         } catch (SecurityException ex) {
             Log.w("ROOT", "Can't get root access", ex);
+            result = false;
         } catch (Exception ex) {
             Log.w("ROOT", "Error executing internal operation", ex);
+            result = false;
         }
 
-        return retval;
+        return result;
     }
 }
