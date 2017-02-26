@@ -1,23 +1,24 @@
-Change Log
+关于
+===
+强力卸载kingroot，如无法正确卸载，欢迎反馈问题
+
+更新日志
+===
+*  添加异步调用shell脚本
+*  添加执行中dialog，防止多次点击
+*  添加跳转到应用商店或官网下载SuperSu
+*  添加about
+
+APK下载
 ===
 
-+ 2017
-    - 2/24
-        * fork [inX95/RmKingroot](https://github.com/inX95/RmKingroot)
-        * 添加异步防止主线程卡死被 Kill。
+[Click Me](https://github.com/inx95/RmKingroot/releases)
 
-apk Download
+使用
 ===
-
-[Click Me](https://github.com/Fantasy-Angel/RmKingroot/releases/tag/v0.1-beta)
-
-Use
-===
-1. Install and run.
-2. Then, use another root management software.
-
-+ 安装运行，之后安装其他权限管理软件，更新 su 文件。
-
+1. 安装，运行
+2. 点击图标开始清除，等待dialog消失
+3. 根据提示安装SuperSu或自行选择
 
 Uninstall Script
 ===

@@ -11,23 +11,36 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="rmkt.inx95.rmkingroot.MainActivity">
 
-
     <TextView
-        android:text="戳图标开始清除kingroot"
+        android:id="@+id/tv_show"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/tv_show"
-        android:layout_marginTop="38dp"
-        android:layout_alignParentTop="true"
         android:layout_alignLeft="@+id/ib_start"
-        android:layout_alignStart="@+id/ib_start" />
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_alignStart="@+id/ib_start"
+        android:layout_marginTop="38dp"
+        android:textSize="18sp"
+        android:textColor="@color/colorPrimary"
+        android:text="戳图标开始清除kingroot" />
 
     <ImageButton
+        android:id="@+id/ib_start"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:srcCompat="@drawable/ic_launcher"
-        android:id="@+id/ib_start"
-        android:layout_marginTop="59dp"
         android:layout_below="@+id/tv_show"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="59dp"
+        app:srcCompat="@drawable/ic_launcher" />
+
+    <TextView
+        android:id="@+id/tv_about"
+        android:textSize="18sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:paddingBottom="50dp"
+        android:text="关于"
+        android:textColor="@color/colorPrimary" />
 </RelativeLayout>
