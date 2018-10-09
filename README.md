@@ -8,20 +8,20 @@ v1.0
 *  添加异步调用shell脚本
 *  添加执行中dialog，防止多次点击
 *  添加跳转到应用商店或官网下载SuperSu
-*  添加关于
+*  添加README
 
 APK下载
 ===
 
-* Release:[Click Me](https://github.com/inx95/RmKingroot/releases)
+* [Release](https://github.com/inx95/RmKingroot/releases)
 
 * 百度云：链接: https://pan.baidu.com/s/1cgU8wA 密码: ha8s
 
-卸载脚本来源
+脚本来源
 ===
-http://www.w0lfdroid.com/2015/05/How-to-Remove-Replace-KingUser-KingRoot-with-SuperSU.html
+http://www.w0lfdroid.com/2015/05/How-to-Remove-Replace-KingUser-KingRoot-with-SuperSU.html  
 
-协议
+License
 ===
 
-MIT
+[MIT](https://opensource.org/licenses/MIT)
